@@ -1,0 +1,42 @@
+<nav class="navbar navbar-default ">
+
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" (click)="collapsed = !collapsed">
+                <span class="icon-bar" *ngFor="let iconBar of [1, 2, 3]"></span>
+            </button>
+            <a routerLink="/"  class="navbar-brand">
+                <img class="image-responsive" src="assets/images/site-new-ico.png" style="max-height: 40px;" >
+            </a>
+        </div>
+
+        <div class="navbar-collapse" [class.collapse]="collapsed" (window:resize)="collapsed = true">
+            <ul class="nav navbar-nav">
+                <li routerLinkActive="active" routerLink="/recipes"><a>Recipes</a></li>
+                <li routerLinkActive="active"><a routerLink="/shopping-list">Shopping List</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a>Sepetim <span class="badge badge-pill badge-primary"
+                            style="background-color:rgb(41, 96, 199);">5</span></a>
+                </li>
+                <li class="dropdown" dropdown>
+                    <a class="dropdown-toggle" role="button" >Manage<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li> <a style="cursor: pointer;">Save Data</a></li>
+                        <li><a style="cursor: pointer;">Fetch Data</a></li>
+                    </ul>
+                </li>
+                <li>
+                  <a mat-button  [matMenuTriggerFor]="menu">User Profile</a>
+                  <mat-menu #menu="matMenu">
+                    <button mat-menu-item routerLinkActive="active" [routerLink]="['/login']" *ngIf="!loggedIn">Login</button>
+                    <button mat-menu-item routerLinkActive="active"  (click)="onLogout()"  *ngIf="loggedIn">Logout</button>
+                    <button mat-menu-item routerLinkActive="active"  (click)="onProfileDetaile()"  *ngIf="loggedIn">Profile Detail</button>
+                  </mat-menu>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</nav>

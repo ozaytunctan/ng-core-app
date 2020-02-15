@@ -1,0 +1,9 @@
+table {
+    width: 100%;
+}
+.mat-stroked-button{
+    margin-left: 8px;
+}
+table thead {
+    margin-top: 8px;
+}
