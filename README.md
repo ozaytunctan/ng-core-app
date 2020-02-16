@@ -13,14 +13,14 @@ Proje Mimari
 Project Build
 ------------------------------------------------------------------------
 1. Generate Library
-    -ng new core-lib --create-application=false 
-    -cd core-lib 
-    -ng generate library core-lib 
+    - ng new core-lib --create-application=false 
+    - cd core-lib 
+    - ng generate library core-lib 
 2. Build Library 
-   -ng build core-lib
-   -cd dist
-   -npm link core-lib --npm link vermek için kullanılır.
+   - ng build core-lib
+   - cd dist
+   - npm link core-lib --npm link vermek için kullanılır.
 3. Using core-lib 
-   -ng new project_name
-   -cd project_name
-   -npm link core-lib
+   - ng new project_name
+   - cd project_name
+   - npm link core-lib
