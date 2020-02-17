@@ -5,7 +5,7 @@ Proje basit olarak yemek tarifi projesidir.
 - Yemek listesi,malzemeler ve alışveriş sepeti içeren basit bir angular projesidir.
 - 
 
-Proje Mimari 
+Project Architect 
 -----------------------------------------------------------------------
 - Orta Katman olarak core-lib
 - web app project_name
